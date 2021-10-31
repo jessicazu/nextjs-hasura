@@ -7,4 +7,5 @@
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true // ファイル保存時に ESLint でフォーマット
   },
+  "cSpell.words": ["todos"]
 }

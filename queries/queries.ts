@@ -42,7 +42,7 @@ export const GET_USER_BY_ID = gql`
 // !は必須である
 export const CREATE_USER = gql`
   mutation CreateUser($name: String!) {
-    insert_users_one(object: {name: $name}) {
+    insert_users_one(object: { name: $name }) {
       id
       name
       created_at
@@ -62,7 +62,7 @@ export const DELETE_USER = gql`
 
 export const UPDATE_USER = gql`
   mutation UpdateUser($id: uuid!, $name: String!) {
-    update_users_by_pk(pk_columns: { id: "" }, _set: { name: "" }) {
+    update_users_by_pk(pk_columns: { id: $id }, _set: { name: $name }) {
       id
       name
       created_at
